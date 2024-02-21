@@ -1,0 +1,73 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "sqs"
+
+Resources:
+  QTFListeReunionDepartsTfm:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFListeReunionDepartsTfm"
+
+  QTFChevalHistoriqueTfm:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFChevalHistoriqueTfm"
+
+  QTFAnalyseCourse:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFAnalyseCourse"
+
+  QTFChevalDetailOnr:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFChevalDetailOnr"
+
+  QTFCourseResultatsOnr:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFCourseResultatsOnr"
+
+  QTFReunionDepartsTfm:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFReunionDepartsTfm"
+
+  QTFCourseDepartsTfm:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFCourseDepartsTfm"
+
+  QTFListeReunionResultatsOnr:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFListeReunionResultatsOnr"
+
+  QTFReunionResultatsOnr:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFReunionResultatsOnr"
+
+  QTFResultatsTfm:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFResultatsTfm"
+
+  QTFResultatsTfo:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFResultatsTfo"
+
+  QTFNonPartantsTfo:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFNonPartantsTfo"
+
+  QTFChevalDetailTfm:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFChevalDetailTfm"
+
+  QTFCordeHippodrome:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFCordeHippodrome"

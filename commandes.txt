@@ -1,0 +1,6 @@
+aws cloudformation create-stack --stack-name Turfdata-Sqs --template-body file:///home/arnaud/Documents/dev/ab-iac/turfdata/sqs.yaml
+aws cloudformation update-stack --stack-name Turfdata-Sqs --template-body file:///home/arnaud/Documents/dev/ab-iac/turfdata/sqs.yaml
+
+
+
+

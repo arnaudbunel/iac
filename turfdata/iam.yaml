@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "iam"
+
+Resources:
+  TurfdataSqs:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      ManagedPolicyName: turfdata_sqs
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'sqs:DeleteMessage'
+              - 'sqs:GetQueueUrl'
+              - 'sqs:ReceiveMessage'
+              - 'sqs:SendMessage'
+            Resource:
+              - !GetAtt QTFListeReunionDepartsTfm.Arn
+              - !GetAtt QTFChevalHistoriqueTfm.Arn
+              - !GetAtt QTFAnalyseCourse.Arn
+              - !GetAtt QTFChevalDetailOnr.Arn
+              - !GetAtt QTFCourseResultatsOnr.Arn
+              - !GetAtt QTFReunionDepartsTfm.Arn
+              - !GetAtt QTFCourseDepartsTfm.Arn
+              - !GetAtt QTFListeReunionResultatsOnr.Arn
+              - !GetAtt QTFReunionResultatsOnr.Arn
+              - !GetAtt QTFResultatsTfm.Arn
+              - !GetAtt QTFResultatsTfo.Arn
+              - !GetAtt QTFNonPartantsTfo.Arn
+              - !GetAtt QTFChevalDetailTfm.Arn
+              - !GetAtt QTFCordeHippodrome.Arn
+      Users:
+        - turfdata
+
+
+
+
+
+
+
+
+
+
+
+
