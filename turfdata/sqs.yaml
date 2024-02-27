@@ -6,68 +6,129 @@ Resources:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFListeReunionDepartsTfm"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFChevalHistoriqueTfm:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFChevalHistoriqueTfm"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFAnalyseCourse:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFAnalyseCourse"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFChevalDetailOnr:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFChevalDetailOnr"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFCourseResultatsOnr:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFCourseResultatsOnr"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFReunionDepartsTfm:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFReunionDepartsTfm"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFCourseDepartsTfm:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFCourseDepartsTfm"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFListeReunionResultatsOnr:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFListeReunionResultatsOnr"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFReunionResultatsOnr:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFReunionResultatsOnr"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFResultatsTfm:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFResultatsTfm"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFResultatsTfo:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFResultatsTfo"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFNonPartantsTfo:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFNonPartantsTfo"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFChevalDetailTfm:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFChevalDetailTfm"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
 
   QTFCordeHippodrome:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: "QTFCordeHippodrome"
+      ReceiveMessageWaitTimeSeconds: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt QTFDeadLetterQueue.Arn
+        maxReceiveCount: 1
+
+  QTFDeadLetterQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "QTFDeadLetterQueue"

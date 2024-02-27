@@ -30,6 +30,7 @@ Resources:
               - !GetAtt QTFNonPartantsTfo.Arn
               - !GetAtt QTFChevalDetailTfm.Arn
               - !GetAtt QTFCordeHippodrome.Arn
+              - !GetAtt QTFDeadLetterQueue.Arn
       Users:
         - turfdata
 
